@@ -2,7 +2,6 @@ package com.example.tipcalculator
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.tipcalculator.databinding.ActivityMainBinding
 import com.example.tipcalculator.databinding.ActivityTipCalculatorBinding
 import java.text.NumberFormat
 

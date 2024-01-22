@@ -12,4 +12,6 @@
     <string name="button">Button</string>
     <string name="secondary_color">Secondary color</string>
     <string name="email_icon">email icon</string>
+    <string name="tip_calculator">Tip Calculator</string>
+    <string name="tip_time">Tip Time</string>
 </resources>

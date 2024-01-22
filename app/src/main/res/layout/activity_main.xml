@@ -20,14 +20,14 @@
             android:id="@+id/tipCalculator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tip Calculator" />
+            android:text="@string/tip_calculator" />
 
         <Button
             android:id="@+id/tipTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Tip Time" />
+            android:text="@string/tip_time" />
 
     </LinearLayout>
 
