@@ -1,2 +1,3 @@
-﻿# Tip-Calculator
-[25662_Guilherme_Silva-Tip_Calculator.webm](https://github.com/gdsduarte/Tip-Calculator/assets/89652569/aba68b60-c33c-42ef-a869-b78604f3ada0)
+﻿# Tip Calculator
+
+[25662_Guilherme_Silva-Tip_Calculator-CA1_Screencast.webm](https://github.com/gdsduarte/Tip-Calculator/assets/89652569/ef353a11-7820-42c6-be1f-874b88d00024)
