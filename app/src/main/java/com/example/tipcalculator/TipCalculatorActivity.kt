@@ -1,6 +1,9 @@
 package com.example.tipcalculator
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tipcalculator.databinding.ActivityTipCalculatorBinding
 import java.text.NumberFormat
@@ -13,12 +16,64 @@ class TipCalculatorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Apply the theme
+        applyTheme()
+
         // Inflate the layout XML file and return a binding object instance
         binding = ActivityTipCalculatorBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Setup a click listener on the calculate button to calculate the tip
         binding.calculateButton.setOnClickListener { calculateTip() }
+    }
+
+    // Create the options menu
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.theme_menu, menu)
+        return true
+    }
+
+    // Respond to menu item clicks by setting the checked state of the item clicked and
+    // setting the app theme accordingly.
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.light_theme -> {
+                setThemePreference("Light")
+                true
+            }
+            R.id.dark_theme -> {
+                setThemePreference("Dark")
+                true
+            }
+            R.id.custom_theme -> {
+                setThemePreference("Custom")
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    // Set the app theme based on the user's menu choice and save the choice in
+    // shared preferences so that it persists across app restarts.
+    private fun setThemePreference(theme: String) {
+        val sharedPreferences = getSharedPreferences("AppSettingsPrefs", MODE_PRIVATE)
+        sharedPreferences.edit().putString("Theme", theme).apply()
+        applyTheme()
+        recreate()
+    }
+
+    // Apply the theme stored in shared preferences to the app. If no theme is stored,
+    // set the app theme to the default, light theme.
+    private fun applyTheme() {
+        val sharedPreferences = getSharedPreferences("AppSettingsPrefs", MODE_PRIVATE)
+        val themeChoice = sharedPreferences.getString("Theme", "Light")
+
+        when (themeChoice) {
+            "Light" -> setTheme(R.style.Theme_TipCalculator_Light)
+            "Dark" -> setTheme(R.style.Theme_TipCalculator_Dark)
+            "Custom" -> setTheme(R.style.Theme_TipCalculator_Custom)
+        }
     }
 
     // Calculate the tip and display on the screen

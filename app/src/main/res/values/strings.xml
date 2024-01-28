@@ -14,4 +14,7 @@
     <string name="email_icon">email icon</string>
     <string name="tip_calculator">Tip Calculator</string>
     <string name="tip_time">Tip Time</string>
+    <string name="light_theme">Light Theme</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="custom_graphic_theme">Custom Theme</string>
 </resources>

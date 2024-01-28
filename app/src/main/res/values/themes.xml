@@ -14,5 +14,33 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.TipCalculator" parent="Base.Theme.TipCalculator" />
+    <!-- Light Theme -->
+    <style name="Theme.TipCalculator.Light" parent="Base.Theme.TipCalculator">
+        <item name="colorPrimary">@color/light_primary</item>
+        <item name="colorPrimaryVariant">@color/light_primaryVariant</item>
+        <item name="colorOnPrimary">@color/light_onPrimary</item>
+        <item name="colorSecondary">@color/light_secondary</item>
+        <item name="colorSecondaryVariant">@color/light_secondaryVariant</item>
+        <item name="colorOnSecondary">@color/light_onSecondary</item>
+    </style>
+
+    <!-- Dark Theme -->
+    <style name="Theme.TipCalculator.Dark" parent="Base.Theme.TipCalculator">
+        <item name="colorPrimary">@color/dark_primary</item>
+        <item name="colorPrimaryVariant">@color/dark_primaryVariant</item>
+        <item name="colorOnPrimary">@color/dark_onPrimary</item>
+        <item name="colorSecondary">@color/dark_secondary</item>
+        <item name="colorSecondaryVariant">@color/dark_secondaryVariant</item>
+        <item name="colorOnSecondary">@color/dark_onSecondary</item>
+    </style>
+
+    <!-- Custom Graphic Theme -->
+    <style name="Theme.TipCalculator.Custom" parent="Base.Theme.TipCalculator">
+        <item name="colorPrimary">@color/custom_primary</item>
+        <item name="colorPrimaryVariant">@color/custom_primaryVariant</item>
+        <item name="colorOnPrimary">@color/custom_onPrimary</item>
+        <item name="colorSecondary">@color/custom_secondary</item>
+        <item name="colorSecondaryVariant">@color/custom_secondaryVariant</item>
+        <item name="colorOnSecondary">@color/custom_onSecondary</item>
+    </style>
 </resources>
